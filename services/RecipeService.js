@@ -25,7 +25,7 @@ class RecipeService {
     if (filters.calories)
       query["nutrients.calories"] = this._parseOperator(filters.calories, true);
 
-    return Recipe.fing(query);
+    return Recipe.find(query);
   }
 
   _parseOperator(filter, isString = false) {
